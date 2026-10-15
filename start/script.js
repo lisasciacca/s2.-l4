@@ -12,6 +12,12 @@ REGOLE
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function area(l1, l2) {
+   return l1 * l2
+}
+
+console.log(area(3, 4))
+
 /* ESERCIZIO 2 — sommaPazza
    Funzione sommaPazza(a, b): ritorna a + b.
    Se a === b: ritorna (a + b) * 3.
@@ -20,6 +26,16 @@ REGOLE
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function sommaPazza(a, b) {
+   if ( a === b ) {
+      return (a + b) * 3;
+   }
+   return a + b;
+}
+
+console.log(sommaPazza(2,3));
+console.log(sommaPazza(4,4));
+
 /* ESERCIZIO 3 — distanzaDa19
    Funzione distanzaDa19(n): ritorna Math.abs(n - 19).
    Se n > 19: ritorna distanza * 3.
@@ -27,6 +43,16 @@ REGOLE
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function distanzaDa19(n) {
+   if (n > 19) {
+      return n * 3;
+   }
+   return Math.abs(n - 19);
+}
+
+console.log(distanzaDa19(5));
+console.log(distanzaDa19(25));
 
 /* ESERCIZIO 4 — dentroIntervallo
    Funzione dentroIntervallo(n):
