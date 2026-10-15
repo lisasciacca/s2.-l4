@@ -61,6 +61,18 @@ console.log(distanzaDa19(25));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function dentroIntervallo(n) {
+   if ( 20 <= n && n <= 100 || n === 400) {
+      return true
+   }
+   return false
+}
+
+console.log(dentroIntervallo(15))
+console.log(dentroIntervallo(80))
+console.log(dentroIntervallo(120))
+console.log(dentroIntervallo(400))
+
 /* ESERCIZIO 5 — epify
    Funzione epify(testo): aggiunge "EPICODE " davanti.
    Se il testo comincia già con "EPICODE", lo lascia invariato.
@@ -69,11 +81,32 @@ console.log(distanzaDa19(25));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function epify(testo) {
+   if (testo.startsWith("EPICODE")) {
+      return testo
+
+   }
+   return "EPICODE" + " " + testo
+}
+
+console.log(epify("ciao"))
+console.log(epify("EPICODE bella"))
+
 /* ESERCIZIO 6 — divisibilePer3o7
    Funzione divisibilePer3o7(n): true se n positivo E divisibile per 3 O per 7.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function divisibilePer3o7(n) {
+   if (n%3 === 0 && n%7 === 0) {
+      return true;
+      }
+   return false;
+}
+
+console.log(divisibilePer3o7(30))
+console.log(divisibilePer3o7(21))
 
 /* ESERCIZIO 7 — invertiStringa
    Funzione invertiStringa(testo): ritorna la stringa invertita.
