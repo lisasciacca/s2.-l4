@@ -169,7 +169,7 @@ console.log(togliPrimoEUltimo("EPICODE"))
 function dammiCasuali(n) {
    let x = [];
    for (let i = 0; i < n; i++) {
-      x.push(Math.floor(Math.random() * 10))
+      x.push(Math.floor(Math.random() * 11))
    }
    return x;
 }
