@@ -27,14 +27,14 @@ console.log(area(3, 4))
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 function sommaPazza(a, b) {
-   if ( a === b ) {
+   if (a === b) {
       return (a + b) * 3;
    }
    return a + b;
 }
 
-console.log(sommaPazza(2,3));
-console.log(sommaPazza(4,4));
+console.log(sommaPazza(2, 3));
+console.log(sommaPazza(4, 4));
 
 /* ESERCIZIO 3 — distanzaDa19
    Funzione distanzaDa19(n): ritorna Math.abs(n - 19).
@@ -62,7 +62,7 @@ console.log(distanzaDa19(25));
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 function dentroIntervallo(n) {
-   if ( 20 <= n && n <= 100 || n === 400) {
+   if (20 <= n && n <= 100 || n === 400) {
       return true
    }
    return false
@@ -99,9 +99,9 @@ console.log(epify("EPICODE bella"))
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 function divisibilePer3o7(n) {
-   if (n%3 === 0 && n%7 === 0) {
+   if (n % 3 === 0 && n % 7 === 0) {
       return true;
-      }
+   }
    return false;
 }
 
@@ -119,7 +119,7 @@ console.log(divisibilePer3o7(21))
 function invertiStringa(testo) {
    let x = testo.split("");
    let y = [];
-   for (let i = testo.length -1; i>=0; i--) {
+   for (let i = testo.length - 1; i >= 0; i--) {
       y.push(x[i])
    }
    return y.join("");
@@ -139,8 +139,8 @@ console.log(invertiStringa("papera"))
 function inizialiMaiuscole(frase) {
    let x = frase.split(" ");
    let y = [];
-   for (let i=0; i < x.length; i++) {
-      y.push (x[i].slice(0,1).toUpperCase() + x[i].slice(1)) /* il primo prende l'iniziale e la rende maiuscola e il secondo prende il resto della palora*/
+   for (let i = 0; i < x.length; i++) {
+      y.push(x[i].slice(0, 1).toUpperCase() + x[i].slice(1)) /* il primo prende l'iniziale e la rende maiuscola e il secondo prende il resto della parola*/
    }
    return y.join(" ");
 }
@@ -153,6 +153,11 @@ console.log(inizialiMaiuscole("la casa blu"))
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function togliPrimoEUltimo(testo) {
+   return testo.slice(1, -1)
+}
+
+console.log(togliPrimoEUltimo("EPICODE"))
 
 /* ESERCIZIO 10 — dammiCasuali
    Funzione dammiCasuali(n): ritorna un array di n numeri interi casuali tra 0 e 10 (inclusi).
@@ -160,6 +165,16 @@ console.log(inizialiMaiuscole("la casa blu"))
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function dammiCasuali(n) {
+   let x = [];
+   for (let i = 0; i < n; i++) {
+      x.push(Math.floor(Math.random() * 10))
+   }
+   return x;
+}
+
+console.log(dammiCasuali(5))
 
 /* --EXTRA-- ESERCIZIO 11 — etaInGiorni
    Funzione etaInGiorni(annoNascita, meseNascita, giornoNascita).
@@ -172,3 +187,13 @@ console.log(inizialiMaiuscole("la casa blu"))
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function etaInGiorni(annoNascita, meseNascita, giornoNascita) {
+   let oggi = new Date();
+   let nascita = new Date(annoNascita, meseNascita - 1, giornoNascita);
+   let millisecondi = oggi - nascita;
+   let giorni = Math.floor(millisecondi / (1000 * 60 * 60 * 24));
+   return giorni
+}
+
+console.log(etaInGiorni(1995, 2, 28))
